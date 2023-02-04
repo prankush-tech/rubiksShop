@@ -1,0 +1,69 @@
+@import 'colors';
+
+
+nav{
+    height: 3rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: ($primary-900);
+
+
+    >div{
+        display: flex;
+        align-items: center;
+        
+        >svg
+        {
+            color: $primary-white;
+            font-size: 2rem;
+        }
+        >h1
+        {
+            color: $primary-white;
+            font-size: 1.4rem;
+            padding-left: 0.5rem;
+        }
+        >a
+        {
+
+            padding: 5rem 1.5rem;
+            max-width: 5rem;
+            color: $primary-white;
+        }
+    }
+}
+.arrow
+{
+    &::before{
+        content:'';
+        position: absolute;
+        top: 3rem;
+        width: 0;
+        height: 2px;
+        background-color: $primary-white;
+        transition: 0.5s;
+    }
+    &:hover{
+        &::before{
+            width: 3rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    nav{
+        padding: 1rem;
+        >div{
+            >h1{
+                display: none;
+            }
+            >a{
+                padding: 0 0.5rem;
+            }
+        }
+    }
+}
+    
