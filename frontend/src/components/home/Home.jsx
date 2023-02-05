@@ -1,9 +1,12 @@
 import React from 'react';
-import cubeVideo from './cube.mp4';
+import cubeVideo from '../../assets/cube.mp4';
 import { motion } from 'framer-motion';
+import Founder from './Founder';
+import Menu from './Menu';
 
 const Home = () => {
 	return (
+		<>
 		<section className="home">
 			<div className="hero-heading">
 				<h1>ROOKIE</h1>
@@ -26,6 +29,9 @@ const Home = () => {
 				<video className="videoSize" src={cubeVideo} alt="video" autoPlay loop muted type="video/mp4" />
 			</div>
 		</section>
+		<Founder />
+		<Menu />
+		</>
 	);
 };
 

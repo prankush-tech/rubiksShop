@@ -1,5 +1,5 @@
 @import 'colors';
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 ::-webkit-scrollbar {
 	display: none;
 	-ms-overflow-style: none; /* Internet Explorer 10+ */
@@ -10,15 +10,20 @@
 	display: flex;
 	padding-top: 4rem;
 	justify-content: center;
+	background-image: url("../assets/shape3.png");
+    // background-blend-mode: screen;
+	background-size: cover;
 	a {
 		text-decoration: none;
 		color: $primary-white;
 		
 		&:hover {
-			color: $primary-500;
+			background-color: $primary-white;
+			color: $primary-900;
 		}
 	}
 	height: 100vh;
+	width: 100vw;
 	background-color: $primary-900;
 	color: $primary-white;
 }
@@ -65,12 +70,12 @@
 	font-size: 12vw;
     width: 100%;
 	font-weight: 100;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: 'Fredoka One', cursive;
 }
 .hero-title-2 {
 	font-size: 12vw;
 	font-weight: 100;
-	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-family: 'Fredoka One', cursive;
 }
 
 @media screen and (max-width: 1110px) {

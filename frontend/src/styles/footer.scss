@@ -1,0 +1,70 @@
+@import 'colors';
+
+
+footer
+{
+    min-height: 300px;
+    background-color: $primary-1000;
+    color: $primary-white;
+    padding: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2{
+        font-size: 3rem;
+        margin-bottom: 4rem;
+        color: $primary-500;
+    }
+
+    strong,
+    p{
+        font-size: 1.2rem;
+    }
+
+    aside
+    {
+        display: flex;
+        padding-left: 15vw;
+        align-items: center;
+        color: $primary-white;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    a{
+        color: $primary-500;
+        font-size: 2rem;
+        padding: 0.5rem;
+
+        &:hover{
+            color: $primary-white;
+        }
+    }
+
+
+}
+
+
+@media screen and (max-width: 768px) {
+    footer
+    {
+        flex-direction: column;
+        padding: 2rem;
+        align-items: center;
+        justify-content: center;
+
+        h2{
+            text-align: center;
+        }
+
+        aside
+        {
+            padding: 0;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+        }
+    }
+}
+    
