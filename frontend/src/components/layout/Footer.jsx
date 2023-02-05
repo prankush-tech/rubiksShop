@@ -25,13 +25,13 @@ const Footer = () => {
         </div>
             <aside>
                 <h4>FOLLOW ME</h4>
-                <a href="prankushgiri.netlify.app">
+                <a href="https://prankushgiri.netlify.app" target="_blank">
                     <AiFillAccountBook />
                 </a>
-                <a href="prankushgiri.netlify.app">
+                <a href="https://instagram.com/prankush1999" target="_blank" >
                     <AiFillInstagram />
                 </a>
-                <a href="prankushgiri.netlify.app">
+                <a href="http://github.com/prankush-tech" target="_blank" >
                     <AiFillGithub />
                 </a>
             </aside>

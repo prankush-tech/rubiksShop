@@ -22,7 +22,7 @@ const Menu = () => {
           title="3x3 CUBE"
           handler={addToCartHandler}
           delay={0.2}
-          view3D="/three"
+          view3D="/cube1"
           />
         <MenuCard 
           itemNum={2} 
@@ -31,7 +31,7 @@ const Menu = () => {
           title="4x4 CUBE"
           handler={addToCartHandler}
           delay={0.5}
-          view3D="window.location.href='www.google.com';"
+          view3D="/cube2"
           />
         <MenuCard 
           itemNum={3} 
@@ -40,7 +40,7 @@ const Menu = () => {
           title="5x5 CUBE"
           handler={addToCartHandler}
           delay={0.8}
-          view3D="window.location.href='www.linktothepage.com';"
+          view3D="/cube3"
           />
         </div>
       </section>
