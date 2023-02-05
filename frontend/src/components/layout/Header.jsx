@@ -8,13 +8,13 @@ import {motion} from 'framer-motion'
 
 
 
-const Header = ({isAuthenticated = true}) => {
+const Header = ({isAuthenticated = false}) => {
   return (
     <nav>
       <motion.div className=""
       initial={{x:"-100%"}}
       whileInView={{x:0}}
-
+      whileHover={{ scale: 1.2 }}
       >
         <GiMeltingIceCube />
         <h1>RUBIK'S CUBE</h1>
