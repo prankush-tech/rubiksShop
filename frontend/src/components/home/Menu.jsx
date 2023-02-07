@@ -30,7 +30,7 @@ const Menu = () => {
           price={100} 
           title="4x4 CUBE"
           handler={addToCartHandler}
-          delay={0.5}
+          delay={0.4}
           view3D="/cube2"
           />
         <MenuCard 
@@ -39,7 +39,7 @@ const Menu = () => {
           price={100} 
           title="5x5 CUBE"
           handler={addToCartHandler}
-          delay={0.8}
+          delay={0.6}
           view3D="/cube3"
           />
         </div>

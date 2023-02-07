@@ -1,0 +1,50 @@
+@import 'colors';
+
+
+.paymentSuccess
+{	background-color: $primary-900;
+	background-image: url('../assets/shape3.png');
+	background-size: cover;
+    background-color: $primary-900;
+    color: $primary-white;
+    width: 100%;
+    height: 60vh;
+
+    >main
+    {
+        font-family: 'Roboto', sans-serif;
+		height: 100%;
+		max-width: 900px;
+		background-color: rgba(10, 10, 10, 0.826);
+		margin: auto;
+		padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+
+        >h1
+        {
+            text-align: center;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 2rem;
+        }
+        >a{
+            background-color: $primary-600;
+            color: $primary-white;
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            border: none;
+            text-align: center;
+            cursor: pointer;
+            margin-top: 2rem;
+            float: none;
+            display: block;
+            text-decoration: none;
+        }
+    }
+}

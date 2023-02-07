@@ -1,2 +1,81 @@
 @import 'colors';
 
+.contact
+{
+    width: 100%;
+    height: 100vh;
+    background-color: $primary-900;
+    background-image: url('../assets/shape3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primary-white;
+
+
+    >form
+    {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.646);
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 1rem;
+        width: 60%;
+        height: 80%;
+
+        >h2
+        {
+            font-size: 4rem;
+            font-weight: 600;
+            margin: 2rem 0rem;
+            text-align: center;
+        }
+
+        >input,
+        >textarea,
+        >button
+        {
+            padding: 1rem;
+            outline: none;
+            border: 1px solid $primary-700;
+            margin: 0.5rem;
+            border-radius: 0.5rem;
+            width: 80%;
+
+        }
+
+        >button
+        {
+            background-color: $primary-600;
+            color: $primary-white;
+            font-size: 1rem;
+            border-radius: 5rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $primary-white;
+                color: $primary-900;
+            }
+        }
+
+    }
+
+ 
+}
+
+
+@media screen and (max-width: 768px)
+{
+    .contact
+    {
+        >form
+        {
+            width: 100vw;
+            height: 100%;
+            padding: 0rem;
+        }
+    }
+}

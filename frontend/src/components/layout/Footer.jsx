@@ -1,5 +1,5 @@
 import React from 'react'
-import {AiFillAccountBook,AiFillInstagram,AiFillGithub} from 'react-icons/ai'
+import {AiFillCodepenCircle,AiFillInstagram,AiFillGithub} from 'react-icons/ai'
 
 
 const Footer = () => {
@@ -26,7 +26,7 @@ const Footer = () => {
             <aside>
                 <h4>FOLLOW ME</h4>
                 <a href="https://prankushgiri.netlify.app" target="_blank">
-                    <AiFillAccountBook />
+                    <AiFillCodepenCircle />
                 </a>
                 <a href="https://instagram.com/prankush1999" target="_blank" >
                     <AiFillInstagram />

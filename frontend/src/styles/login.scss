@@ -1,0 +1,42 @@
+@import 'colors';
+
+.login{
+    height: 100vh;
+    background-color: $primary-900;
+    background-image: url('../assets/shape3.png');
+    background-size: cover;
+    color: $primary-white;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    >button{
+
+        background-color: $primary-600;
+        color: $primary-white;
+        font-size: 1.1rem;
+        padding: 1rem 2rem;
+        border-radius: 100px;
+        border: none;
+        text-align: center;
+        cursor: pointer;
+        margin-top: 2rem;
+        float: none;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        >svg{
+            margin-left: 1rem;
+            color: $primary-white;
+        }
+
+        &:hover
+        {
+            background-color: $primary-700;
+        }
+    }
+
+}

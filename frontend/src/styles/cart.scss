@@ -1,0 +1,112 @@
+@import "colors";
+
+.cart {
+	background-color: $primary-900;
+	background-image: url('../assets/shape3.png');
+	background-size: cover;
+	color: $primary-white;
+	height: 100%;
+	width: 100%;
+
+	> main {
+		height: 100%;
+		max-width: 900px;
+		background-color: rgba(10, 10, 10, 0.826);
+		margin: auto;
+		padding: 2rem;
+
+        >article {
+            padding: 2rem;
+            
+            >div
+            {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 1.5rem;
+            }
+        
+            >a
+            {
+                background-color: $primary-500;
+                color: $primary-white;
+                font-size: 1.5rem;
+                padding: 1rem 0.5rem;
+                border-radius: 100px;
+                text-align: center;
+                cursor: pointer;
+                margin-top: 2rem;
+                float: none;
+                display: block;
+            }
+        }
+	}
+}
+
+.cartItem {
+	background-color: $primary-900;
+    border: 1.5px solid $primary-700;
+	margin: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem;
+	border-radius: 10px;
+
+	> div {
+		display: flex;
+		align-items: center;
+
+        >h4
+        {
+            font-weight: 200;
+            letter-spacing: 2px;
+        }
+
+        >img
+        {
+            height:100px;
+        }
+
+        >input
+        {
+            width: 2rem;
+            height: 2rem;
+            border: none;
+            margin: 0.25rem;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: 200;
+            letter-spacing: 2px;
+
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+
+        >button
+        {
+            cursor: pointer;
+            border: none;
+            background-color: $primary-500;
+            color: $primary-white;
+            padding: 0.5rem;
+            border-radius: 5px;
+
+
+        }
+	}
+}
+
+
+@media screen and (max-width: 440px){
+    .cart
+    {
+        >main
+        {
+            padding: 1rem 0rem;
+        }
+    }
+}

@@ -21,7 +21,7 @@ const MenuCard = ({itemNum,cubeSrc ,price,title, handler,delay=0,view3D}) => {
         <div >CUBE {itemNum}</div>
         <main>
             <img src={cubeSrc} alt="cube" />
-            <h5>Rs{price}</h5>
+            <h5>Rs {price} /-</h5>
             <p>{title}</p>
             <button onClick={()=>handler(itemNum) } >BUY NOW </button>
             <button>
