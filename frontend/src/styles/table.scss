@@ -1,0 +1,87 @@
+@import "colors";
+.tableClass
+{
+    background-color: $primary-900;
+    background-image: url('../assets/shape3.png');
+    background-size: cover;
+    color: $primary-white;
+    height: 100vh;
+    width: 100%;
+    main{
+        display: flex;
+        max-width: 900px;
+        background-color: $primary-900;
+        margin: auto;
+        height: 100%;
+        padding: 2rem;
+        overflow-x: auto;
+        
+        >table{
+            margin-top: 3rem;
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        td{
+
+            border: 1.5px solid $primary-500;
+        }
+        tr{
+            background-color: $primary-900;
+            
+            &:last-child 
+            {
+                td:first-child {
+                    border-radius: 0 0 0 10px;
+                }
+                td:last-child {
+                    border-radius: 0 0 10px 0;
+                }
+            }
+            
+        }
+        
+        td,
+        th {
+            font-family: 'Roboto', sans-serif;
+            padding: 1rem;
+        }
+        
+        th {
+        background-color: $primary-600;
+        color: white;
+        &:first-child {
+          border-radius: 10px 0 0 0;
+        }
+        &:last-child {
+          border-radius: 0 10px 0 0;
+        }
+      }
+
+      td {
+        color: $primary-white;
+
+        > img {
+          width: 30px;
+          height: 30px;
+          border-radius: 100%;
+          color: $primary-white;
+
+        }
+        > a {
+            color: $primary-white;
+            &:hover{
+                color: $primary-500;
+            }
+
+          }
+          > button {
+            border: none;
+            cursor: pointer;
+            margin: 0.25rem;
+            color: $primary-500;
+          }
+    }
+
+    }
+}

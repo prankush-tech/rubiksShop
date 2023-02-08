@@ -1,0 +1,130 @@
+@import "colors";
+
+.orderDetails {
+  background-color: $primary-900;
+  background-image: url('../assets/shape3.png');
+  padding: 2rem;
+  background-size: cover;
+  
+  >main {
+    max-width: 900px;
+    border-radius: 10px;
+    background-color: $primary-700;
+    margin: auto;
+    padding: 2rem;
+    overflow-x: auto;
+    margin-top: 3rem;
+
+    >h1 {
+      background-color: $primary-600;
+      border-radius: 10px;
+      padding: 2rem 0rem;
+      text-transform: uppercase;
+      color: $primary-white;
+      text-align: center;
+      font: 100 4rem "Roboto";
+    }
+
+    >div {
+      margin: 2rem 0;
+      text-align: center;
+      
+      >h1 {
+        font-family: "Roboto";
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $primary-white;
+        padding: 1.2rem 0rem;
+        border-radius: 10px 10px 0px 0px;
+        letter-spacing: 5px;
+        background-color: $primary-600;
+      }
+
+      >p {
+        font-weight: 200;
+        color: $primary-white;
+        white-space: nowrap;
+        font-family: "Roboto";
+        text-align: center;
+        letter-spacing: 2px;
+        margin: 2rem;
+
+        >b {
+          margin-right: 5px;
+          text-align: center;
+          font-family: "Roboto";
+        }
+      }
+    }
+    
+    >article {
+      >h1 {
+        background-color: $primary-600;
+        border-radius: 10px 10px 0px 0px;
+        color: $primary-white;
+        font-size: 1.8rem;
+        font-family: "Roboto",sans-serif ;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin: 2rem 0;
+        text-align: center;
+      }
+      
+      >div {
+        background-color:$primary-600;
+        color: $primary-white;
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        border-radius: 5px;
+        
+        >h4 {
+          font-family: "Roboto",sans-serif ;
+          font-weight: 200;
+          letter-spacing: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .orderDetails {
+    padding: 0.5rem;
+    >main {
+      padding: 0rem;
+
+      >h1 {
+        font-size: 1.5rem;
+        margin: 0rem;
+      }
+
+      >div {
+        >h1 {
+          font-size: 1.5rem;
+          object-fit: contain;
+        }
+
+        >p {
+          letter-spacing: 1px;
+          font-size: 1rem;
+          margin: 2rem 0;
+        }
+      }
+    }
+
+    >div {
+      >h1 {
+        font-size: 1rem;
+      }
+
+      >p {
+        letter-spacing: 1px;
+        font-size: 0.9rem;
+        margin: 2rem 0;
+      }
+    }
+  }
+}

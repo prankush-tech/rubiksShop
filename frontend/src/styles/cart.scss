@@ -38,6 +38,11 @@
                 margin-top: 2rem;
                 float: none;
                 display: block;
+                &:hover
+                {
+                    background-color: $primary-white;
+                    color: $primary-1000;
+                }
             }
         }
 	}
@@ -94,6 +99,7 @@
             color: $primary-white;
             padding: 0.5rem;
             border-radius: 5px;
+
 
 
         }
