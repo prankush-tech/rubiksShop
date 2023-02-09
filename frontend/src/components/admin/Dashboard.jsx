@@ -1,13 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import {Doughnut} from 'react-chartjs-2';
-import {Chart as ChartJS} from 'chart.js'
+import {Chart as ChartJS,Tooltip,ArcElement,Legend} from 'chart.js'
 
+ChartJS.register(Tooltip,ArcElement,Legend)
 
 const Box = ({title,value}) => (
     <div>
         <h3>
-            {title === "Income" && "RS."}
+            {title === "Income" && "Rs."}
             {value}
         </h3>
 
@@ -16,6 +17,18 @@ const Box = ({title,value}) => (
 );
 
 const Dashboard = () => {
+
+    const data ={
+        labels:['Preparing','Shipped','Delivered'],
+        datasets:[
+           { labels:' # no of orders',
+            data:[2,3,4],
+            backgroundColor:['#ff6384','#36a2eb','#ffce56'],
+            borderColor:['rgb(255, 255, 255)'],
+            borderWidth:1}
+        ]
+
+    }
   return (
     <section className="dashboard">
         <main>
@@ -32,7 +45,7 @@ const Dashboard = () => {
                 </div>
 
                 <aside>
-
+                    <Doughnut data={data} />
                 </aside>
             </section>
         </main>

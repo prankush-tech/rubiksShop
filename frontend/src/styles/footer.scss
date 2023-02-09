@@ -30,6 +30,7 @@ footer
         color: $primary-white;
         flex-direction: column;
         height: 100%;
+        text-align: center;
     }
 
     a{
@@ -64,6 +65,7 @@ footer
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
+            text-align: center;
         }
     }
 }
