@@ -1,0 +1,124 @@
+@import "colors";
+
+.about {
+    width: 100%;
+	background-image: url("../assets/shape3.png");
+    // background-blend-mode: screen;
+	background-size: cover;
+    background-color: $primary-900;
+    color: $primary-white;
+  > main {
+    background-color: primary-900;
+    max-width: 900px;
+    height: 100%;
+    margin: auto;
+
+    > h1 {
+      font-size: 5rem;
+      color: $primary-white;
+      padding: 1rem 2rem;
+      text-transform: uppercase;
+      // background-color: $primary-600;
+      text-align: center;
+      
+    }
+
+    > article {
+      margin: 2rem 0;
+      > h4 {
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      > p {
+        letter-spacing: 3px;
+        word-spacing: 3px;
+        padding: 1rem;
+        width: 50%;
+        text-align: center;
+        margin: auto;
+        // font: 100 2rem "Roboto";
+        font-size: 1.2rem;
+      }
+
+      > a {
+        background-color: $primary-600;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        color: white;
+        font-size: 1.5rem;
+        transition: all 0.3s;
+        margin: auto;
+        &:hover {
+          color: $primary-500;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    > div {
+      background-color: $primary-600;
+      padding: 2rem;
+      color: white;
+      > h2 {
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      > article {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > div {
+          margin: 2rem;
+          > img {
+            width: 150px;
+            height: 180px;
+            border-radius: 10px;
+            filter: grayscale(100%);
+          }
+          > h3 {
+            margin: 1rem;
+            
+          }
+        }
+        > p {
+          margin: 0 1rem;
+          width: 50%;
+          letter-spacing: 0px;
+          // font: 100 1.5rem "Roboto";
+          line-height: 150%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about > main {
+    > h1 {
+      font-size:3rem;
+      text-align: center;
+    }
+
+    > article > p {
+      width: 100%;
+    }
+
+    > div > article {
+      flex-direction: column;
+
+      > p {
+        width: 80%;
+        text-align: center;
+      }
+    }
+  }
+}
