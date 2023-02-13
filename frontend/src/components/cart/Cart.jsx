@@ -48,7 +48,7 @@ const Cart = () => {
                 decrement={()=> decrement(1)}
              />
             <CartItem 
-                title={"MKoto"} 
+                title={"NKoto"} 
                 img={cube3} 
                 value={1}
                 increment={()=> increment(1)}
