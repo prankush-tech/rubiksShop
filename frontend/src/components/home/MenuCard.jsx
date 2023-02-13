@@ -24,7 +24,8 @@ const MenuCard = ({itemNum,cubeSrc ,price,title, handler,delay=0,view3D}) => {
             <h5>Rs {price} /-</h5>
             <p>{title}</p>
             <button onClick={()=>handler(itemNum) } >BUY NOW </button>
-            <button>
+            
+            <button className='buttonHiding'>
                 <a href={view3D} target="_blanck">VIEW 3D</a>
             </button>
         </main>

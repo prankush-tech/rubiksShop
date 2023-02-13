@@ -1,5 +1,7 @@
 import React from 'react'
-import cubeImage from '../../assets/cube.jpg'
+import cube1 from '../../assets/cube1.png'
+import cube2 from '../../assets/cube2.png'
+import cube3 from '../../assets/cube3.png'
 import {Link} from 'react-router-dom'
 
 const CartItem =({value,title, img,increment,decrement})=>(
@@ -39,22 +41,22 @@ const Cart = () => {
         <main>
 
             <CartItem 
-                title={"Cube 1"} 
-                img={cubeImage} 
+                title={"MKoto"} 
+                img={cube2} 
                 value={0}
                 increment={()=> increment(1)}
                 decrement={()=> decrement(1)}
              />
             <CartItem 
-                title={"Cube 2"} 
-                img={cubeImage} 
+                title={"MKoto"} 
+                img={cube3} 
                 value={1}
                 increment={()=> increment(1)}
                 decrement={()=> decrement(1)}
              />
             <CartItem 
-                title={"Cube 3"} 
-                img={cubeImage} 
+                title={"BKoto"} 
+                img={cube1} 
                 value={2}
                 increment={()=> increment(1)}
                 decrement={()=> decrement(1)}

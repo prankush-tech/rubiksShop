@@ -1,6 +1,8 @@
 import React from 'react'
 import MenuCard from './MenuCard'
-import cubeImage from '../../assets/cube.jpg'
+import cube1 from '../../assets/cube1.png'
+import cube2 from '../../assets/cube2.png'
+import cube3 from '../../assets/cube3.png'
 import { useNavigate } from "react-router-dom";
 
 
@@ -17,30 +19,30 @@ const Menu = () => {
         <div className="">
         <MenuCard 
           itemNum={1} 
-          cubeSrc={cubeImage}  
+          cubeSrc={cube2}  
           price={100} 
-          title="3x3 CUBE"
+          title="MKoto"
           handler={addToCartHandler}
           delay={0.2}
           view3D="https://my.spline.design/untitled-4e7064ad9e766291d054b80407ca2375/"
           />
         <MenuCard 
           itemNum={2} 
-          cubeSrc={cubeImage}  
+          cubeSrc={cube3}  
           price={100} 
-          title="4x4 CUBE"
+          title="NKoto"
           handler={addToCartHandler}
           delay={0.4}
-          view3D="/cube2"
+          view3D="https://my.spline.design/glasscubecopy-4cbd9ac02d494d8d58f192588878aa2c/"
           />
         <MenuCard 
           itemNum={3} 
-          cubeSrc={cubeImage}  
+          cubeSrc={cube1}  
           price={100} 
-          title="5x5 CUBE"
+          title="BKoto"
           handler={addToCartHandler}
           delay={0.6}
-          view3D="/cube3"
+          view3D="https://my.spline.design/glasscubecopycopy-8cba20066362441d1f727491bd077014/"
           />
         </div>
       </section>

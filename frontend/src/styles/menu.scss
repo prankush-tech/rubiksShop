@@ -119,5 +119,15 @@
     {
         width: 100%;
         margin-bottom: 2rem;
+        >main{
+            >h5{
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+    .buttonHiding
+    {
+        display: none;
     }
 }
