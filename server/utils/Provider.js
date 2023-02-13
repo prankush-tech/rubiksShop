@@ -38,8 +38,8 @@ export const connectPassport = () => {
 		done(null, user.id);
 	});
 
-	passport.deserializeUser((id, done) => {
-		// const user = await User.findById(id);
+	passport.deserializeUser(async(id, done) => {
+		const user = await User.findById(id);
 		done(null, user);
 	});
 };

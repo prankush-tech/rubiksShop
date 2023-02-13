@@ -9,9 +9,7 @@ import ConfirmOrder from './components/cart/ConfirmOrder.jsx';
 import PaymentSuccess from './components/cart/PaymentSuccess.jsx';
 import Profile from './components/profile/Profile';
 import Login from './components/login/Login.jsx';
-import R3F1 from './components/r3f/R3F1';
-import R3F2 from './components/r3f/R3F2';
-import R3F3 from './components/r3f/R3F3';
+
 import MyOrders from './components/myOrders/MyOrders';
 import OrderDetails from './components/myOrders/OrderDetails';
 import Dashboard from './components/admin/Dashboard';
@@ -64,10 +62,6 @@ function App()
 
 
 
-
-				<Route path="/cube1" element={<R3F1/>} />
-				<Route path="/cube2" element={<R3F2/>} />
-				<Route path="/cube3" element={<R3F3/>} />
 
 
 

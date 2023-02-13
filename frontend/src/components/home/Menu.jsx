@@ -22,7 +22,7 @@ const Menu = () => {
           title="3x3 CUBE"
           handler={addToCartHandler}
           delay={0.2}
-          view3D="/cube1"
+          view3D="https://my.spline.design/untitled-4e7064ad9e766291d054b80407ca2375/"
           />
         <MenuCard 
           itemNum={2} 
