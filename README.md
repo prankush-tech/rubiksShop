@@ -4,11 +4,12 @@
 
 ![Screenshot 2023-02-05 165557](https://user-images.githubusercontent.com/76916192/216816024-067f3aa6-f78d-4b3a-af41-a217f9fb32ac.png)
 ### PRODUCT
-![screenshot-192 168 43 32_5173-2023 02 07-01_56_06](https://user-images.githubusercontent.com/76916192/217077834-2fcedb45-9bdd-4176-b6a6-54bf3a87230a.png)
+
+![screenshot-127 0 0 1_5173-2023 02 14-11_08_30](https://user-images.githubusercontent.com/76916192/218650864-dfd431bc-d792-44a4-9547-c2f1404bd569.png)
 
 ### CART
 
-![screenshot-192 168 43 32_5173-2023 02 07-01_57_26](https://user-images.githubusercontent.com/76916192/217077945-0db3b0c2-3d3a-487a-84c6-9ccfbedd42c2.png)
+![screenshot-127 0 0 1_5173-2023 02 14-11_18_50](https://user-images.githubusercontent.com/76916192/218651474-16123cc3-994d-45e5-89ed-548989bf5473.png)
 
 ### DASHBOARD
 ![Screenshot 2023-02-11 112943](https://user-images.githubusercontent.com/76916192/218243291-6fed90c1-944c-4dbc-a881-bc8785a0e392.png)
