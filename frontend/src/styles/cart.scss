@@ -24,6 +24,12 @@
                 justify-content: space-between;
                 align-items: center;
                 margin-bottom: 1.5rem;
+                >h4,p
+                {
+                    font-size: 2rem;
+                    font-weight: 200;
+                    letter-spacing: 0px;
+                }
             }
         
             >a
@@ -65,12 +71,15 @@
         >h4
         {
             font-weight: 200;
-            letter-spacing: 2px;
+            font-size: 2rem;
+            padding: 2rem;
+            letter-spacing: 0px;
         }
 
         >img
         {
             height:100px;
+            padding: 0.5rem;
         }
 
         >input
@@ -100,8 +109,6 @@
             padding: 0.5rem;
             border-radius: 5px;
 
-
-
         }
 	}
 }
@@ -113,6 +120,32 @@
         >main
         {
             padding: 1rem 0rem;
+            
+        >article {
+            padding: 1.5rem;
+            
+            >div
+            {
+                >h4,p
+                {
+                    font-size: 1.2rem;
+                    font-weight: 200;
+                    letter-spacing: 0px;
+                }
+            }
+        }
+    }
+}
+    .cartItem{
+        >div >img{
+
+            height: 60px;
+
+        }
+
+        >div >h4{
+            font-size: 1.2rem;
+            padding: 0.5rem;
         }
     }
 }

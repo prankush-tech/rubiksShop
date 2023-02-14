@@ -12,7 +12,7 @@ const CartItem =({value,title, img,increment,decrement})=>(
                 <img src={img} alt=""></img>
             </div>
 
-            <div className="div">
+            <div className="">
                 <button onClick={decrement} className="">-</button>
                 <input type="number" readOnly value={value} />
                 <button onClick={increment} className="">+</button>

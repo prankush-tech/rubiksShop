@@ -1,7 +1,7 @@
 import express from 'express';
 import passport from 'passport';
-import { myProfiles, logout } from '../controllers/user.js';
-import { isAuthenticated } from '../middlewares/auth.js';
+import { myProfiles, logout, getAdminUsers } from '../controllers/user.js';
+import { authorizedAdmin, isAuthenticated } from '../middlewares/auth.js';
 
 
 const router = express.Router();
@@ -25,5 +25,9 @@ router.get('/me', isAuthenticated, myProfiles);
 
 //logout
 router.get('/logout', logout);
+
+
+//adminn Routes
+router.get("/admin/users", isAuthenticated,authorizedAdmin,getAdminUsers)
 
 export default router;
