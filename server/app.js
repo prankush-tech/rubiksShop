@@ -7,7 +7,7 @@ import session from 'express-session';
 import passport from 'passport';
 import cookieParser from 'cookie-parser';
 import { errorMiddleWare } from './middlewares/errorMiddleware.js';
-import cors from 'cors';
+
 
 //create and export the app
 const app = express();
