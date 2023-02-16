@@ -27,19 +27,8 @@ app.use(session({
     resave:false,
     saveUninitialized:false,
     name:"PRANKUSH_COOKIE",
-    cookie: {
-        secure: process.env.NODE_ENV === "development" ? false : true,
-        httpOnly: process.env.NODE_ENV === "development" ? false : true,
-        sameSite: process.env.NODE_ENV === "development" ? false : "none",
-      },
 }))
 
-app.use(cors({
-
-    credentials:true,
-    origin:process.env.FRONTEND_URL,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-}))
 
 
 app.use(cookieParser());
