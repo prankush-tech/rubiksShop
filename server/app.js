@@ -7,7 +7,7 @@ import session from 'express-session';
 import passport from 'passport';
 import cookieParser from 'cookie-parser';
 import { errorMiddleWare } from './middlewares/errorMiddleware.js';
-
+import cors from 'cors';
 
 //create and export the app
 const app = express();
@@ -26,8 +26,21 @@ app.use(session({
     secret:process.env.SESSION_SECRET,
     resave:false,
     saveUninitialized:false,
-    name:"PRANKUSH_COOKIE"
+    name:"PRANKUSH_COOKIE",
+    cookie: {
+        secure: process.env.NODE_ENV === "development" ? false : true,
+        httpOnly: process.env.NODE_ENV === "development" ? false : true,
+        sameSite: process.env.NODE_ENV === "development" ? false : "none",
+      },
 }))
+
+app.use(cors({
+
+    credentials:true,
+    origin:process.env.FRONTEND_URL,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+}))
+
 
 app.use(cookieParser());
 app.use(urlencoded({
@@ -37,7 +50,7 @@ app.use(express.json());
 app.use(passport.authenticate("session"));
 app.use(passport.initialize());
 app.use(passport.session());
-
+app.enable("trust proxy")
 
 
 

@@ -3,6 +3,7 @@ import { Order } from "../models/Order.js";
 import ErrorHandler from "../utils/ErrorHandler.js";
 import Stripe from 'stripe';
 import dotenv from "dotenv";
+import { User } from "../models/User.js";
 
 
 //config the environmental variable
@@ -12,7 +13,6 @@ dotenv.config({
 
 
 const stripe = new Stripe(process.env.STRIPE_KEY);
-
 export const YOUR_DOMAIN="http://localhost:4000"
 
 
@@ -30,7 +30,7 @@ export const placeOrder = asyncError(async (req, res, next) => {
       } = req.body;
 
 
-   const user = "req.user._id";
+   const user = req.user._id;
 
    const orderOptions = {
     shippingInfo,
@@ -54,15 +54,11 @@ res.status(201).json({
 
 
 
-
-
-
-
-
 export const placeOrderOnline = asyncError(async (req, res, next) => {
 
 
-  const {
+  const 
+  {
       shippingInfo,
       orderItems,
       paymentMethod,
@@ -74,7 +70,7 @@ export const placeOrderOnline = asyncError(async (req, res, next) => {
 
 
 
- const user = "req.user._id";
+ const user = req.user._id;
 
  const orderOptions = 
  {
@@ -89,34 +85,46 @@ export const placeOrderOnline = asyncError(async (req, res, next) => {
 };
 
 
-const session = await stripe.checkout.sessions.create({
+ const session = await stripe.checkout.sessions.create({
   line_items: [
     {
-      price:'price_1MbTrASIM2plNC4iP44ZofHt',
+      price:'price_1MbUhZSIM2plNC4iO7s0uYPB',
       quantity: 1,
     },
   ],
   mode: 'payment',
   success_url: `${YOUR_DOMAIN}?success=true`,
   cancel_url: `${YOUR_DOMAIN}?canceled=true`,
-});
-
-
-
-
-
-await Order.create(orderOptions);
-
-res.status(201).json({
-  success: true,
-  orderOptions,
-  session,
-  message: "Order Placed Successfully via ONLINE",
-});
 
 });
 
 
+
+await Order.create({
+  ...orderOptions,
+  orderID: session.id,
+  paidAt: new Date(Date.now()),
+});
+// await Order.create(orderOptions);
+
+    res.status(201).json({
+      success: true,
+      sessionID: session.id,
+      sessionUrl: session.url,
+      orderOptions,
+      message: "Order Placed Successfully via ONLINE",
+    });
+
+    
+});
+
+
+
+export const paymentVerification = asyncError(async (req, res, next) => {
+
+
+
+})
 
 
 
@@ -171,5 +179,34 @@ export const processOrder = asyncError(async (req, res, next) => {
   res.status(200).json({
     success: true,
     message: "Status Updated Successfully",
+  });
+});
+
+
+
+export const getAdminStats = asyncError(async (req, res, next) => {
+  const usersCount = await User.countDocuments();
+  const orders = await Order.find({});
+
+  const preparingOrders = orders.filter((i) => i.orderStatus === "Processing");
+  const shippedOrders = orders.filter((i) => i.orderStatus === "Shipped");
+  const deliveredOrders = orders.filter((i) => i.orderStatus === "Delivered");
+
+  let totalIncome = 0;
+
+orders.forEach((i) => {
+    totalIncome += i.totalAmount;
+  });
+
+  res.status(200).json({
+    success: true,
+    usersCount,
+    ordersCount: {
+      total: orders.length,
+      processing: preparingOrders.length,
+      shipped: shippedOrders.length,
+      delivered: deliveredOrders.length,
+    },
+    totalIncome,
   });
 });

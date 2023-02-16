@@ -64,7 +64,7 @@ const schema = new mongoose.Schema({
     },
 
     user:{
-        type:mongoose.Schema.Types.ObjectId,
+        type:mongoose.Schema.ObjectId,
         ref:'User',
         required:true,
     },
@@ -75,9 +75,10 @@ const schema = new mongoose.Schema({
         default:"COD",
     },
 
-    paymentInfo:{
-       type:mongoose.Schema.ObjectId,
-    ref:'Payment',
+    orderID:
+    {
+       type:String,
+       ref:'Payment',
     },
 
     paidAT:Date,

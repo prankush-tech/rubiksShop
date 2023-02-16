@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
-  razorpay_order_id: {
+  stripe_session_order_id: {
     type: String,
     required: true,
   },
