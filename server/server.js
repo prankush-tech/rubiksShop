@@ -12,5 +12,5 @@ app.get('/',(req,res)=>{
 })
 
 app.listen(process.env.PORT,()=>{
-    console.log(`http://localhost:${process.env.PORT} in ${process.env.NODE_ENV}mode`);
+    console.log(`http://localhost:${process.env.PORT} in ${process.env.NODE_ENV} mode`);
 })
