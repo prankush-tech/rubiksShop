@@ -17,11 +17,13 @@ export const logout=(req,res,next)=>{
         {
             return next(err)
         }
-        res.clearCookie("PRANKUSH_COOKIE",{
+        res.clearCookie("PRANKUSH_COOKIE",
+        {
             secure: process.env.NODE_ENV === "development" ? false : true,
             httpOnly: process.env.NODE_ENV === "development" ? false : true,
             sameSite: process.env.NODE_ENV === "development" ? false : "none",
-          })
+          }
+          )
         res.status(200).json({
             message:"Logged Out"
         })
