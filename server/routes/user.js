@@ -11,9 +11,11 @@ router.get('/googlelogin', passport.authenticate('google', { scope: [ 'profile' 
 
 router.get(
 	'/login',
-	passport.authenticate('google'),
+	passport.authenticate('google',{
+
+		successRedirect: process.env.FRONTEND_URL
+	}),
 	// 	scope: [ 'profile' ],
-	// 	successRedirect: process.env.FRONTEND_URL
 	// })
 
 	(req, res, next) => {
