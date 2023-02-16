@@ -14,13 +14,8 @@ router.get(
 	passport.authenticate('google',{
 
 		successRedirect: process.env.FRONTEND_URL
-	}),
+	})
 	// 	scope: [ 'profile' ],
-	// })
-
-	(req, res, next) => {
-		res.send('Logged IN');
-	}
 );
 
 //login
