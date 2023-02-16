@@ -27,11 +27,11 @@ app.use(
 		name: 'PRANKUSH_COOKIE',
 
 
-		cookie: {
-			secure: process.env.NODE_ENV === 'development' ? false : true,
-			httpOnly: process.env.NODE_ENV === 'development' ? false : true,
-			sameSite: process.env.NODE_ENV === 'development' ? false : 'none'
-		}
+		// cookie: {
+		// 	secure: process.env.NODE_ENV === 'development' ? false : true,
+		// 	httpOnly: process.env.NODE_ENV === 'development' ? false : true,
+		// 	sameSite: process.env.NODE_ENV === 'development' ? false : 'none'
+		// }
 	})
 );
 
@@ -43,18 +43,18 @@ app.use(
 	})
 );
 
-app.use(
-	cors({
-		credentials: true,
-		origin: process.env.FRONTEND_URL,
-		methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
-	})
-);
+// app.use(
+// 	cors({
+// 		credentials: true,
+// 		origin: process.env.FRONTEND_URL,
+// 		methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
+// 	})
+// );
 
 app.use(passport.authenticate('session'));
 app.use(passport.initialize());
 app.use(passport.session());
-app.enable("trust proxy");
+// app.enable("trust proxy");
 
 connectPassport();
 
