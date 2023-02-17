@@ -43,13 +43,13 @@ app.use(
 	})
 );
 
-// app.use(
-// 	cors({
-// 		credentials: true,
-// 		origin: process.env.FRONTEND_URL,
-// 		methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
-// 	})
-// );
+app.use(
+	cors({
+		credentials: true,
+		origin: process.env.FRONTEND_URL,
+		methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
+	})
+);
 
 app.use(passport.authenticate('session'));
 app.use(passport.initialize());
