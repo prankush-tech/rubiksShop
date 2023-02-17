@@ -19,20 +19,7 @@ dotenv.config({
 });
 
 //using session for storing user data
-app.use(
-	session({
-		secret: process.env.SESSION_SECRET,
-		resave: false,
-		saveUninitialized: false,
-		name: 'PRANKUSH_COOKIE',
 
-		// cookie: {
-		// 	secure: process.env.NODE_ENV === 'development' ? false : true,
-		// 	httpOnly: process.env.NODE_ENV === 'development' ? false : true,
-		// 	sameSite: process.env.NODE_ENV === 'development' ? false : 'none'
-		// }
-	})
-);
 
 app.use(cookieParser());
 app.use(express.json());
@@ -53,7 +40,7 @@ app.use(
 app.use(passport.authenticate('session'));
 app.use(passport.initialize());
 app.use(passport.session());
-app.enable("trust proxy");
+app.set('trust proxy', 1)
 
 connectPassport();
 
@@ -62,3 +49,17 @@ app.use('/api/v1', orderRoute);
 
 
 app.use(errorMiddleWare);
+app.use(
+	session({
+		secret: process.env.SESSION_SECRET,
+		resave: false,
+		saveUninitialized: false,
+		name: 'PRANKUSH_COOKIE',
+
+		// cookie: {
+		// 	secure: process.env.NODE_ENV === 'development' ? false : true,
+		// 	httpOnly: process.env.NODE_ENV === 'development' ? false : true,
+		// 	sameSite: process.env.NODE_ENV === 'development' ? false : 'none'
+		// }
+	})
+);
