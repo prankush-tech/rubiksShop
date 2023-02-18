@@ -17,7 +17,7 @@ export const logout=(req,res,next)=>{
         {
             return next(err)
         }
-        res.clearCookie("PRANKUSH_COOKIE",
+        res.clearCookie("connect.sid",
         // {
         //     secure: process.env.NODE_ENV === "development" ? false : true,
         //     httpOnly: process.env.NODE_ENV === "development" ? false : true,

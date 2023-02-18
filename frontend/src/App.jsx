@@ -17,10 +17,9 @@ import Orders from './components/admin/Orders';
 import About from './components/about/About';
 import NotFound from './components/layout/NotFound';
 import { useEffect } from 'react';
-import {useDispatch, useSelector} from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { loadUser } from './redux/actions/user';
-import toast,{Toaster} from 'react-hot-toast';
-
+import toast, { Toaster } from 'react-hot-toast';
 
 import './styles/app.scss';
 import './styles/header.scss';
@@ -40,14 +39,11 @@ import './styles/orderDetails.scss';
 import './styles/dashboard.scss';
 import './styles/about.scss';
 
-
-
-
-
-
-function App()
-{  const dispatch = useDispatch();
-	const { error, message, isAuthenticated } = useSelector(state => state.auth)
+function App() {
+	const dispatch = useDispatch();
+	const { error, message, isAuthenticated } = useSelector(
+	  (state) => state.auth
+	);
   
 	useEffect(() => {
 	  dispatch(loadUser());
@@ -66,9 +62,7 @@ function App()
 		  type: "clearMessage",
 		});
 	  }
-	}, [dispatch, error,message]);
-
-
+	}, [dispatch, error, message]);
 
 	return (
 		<Router>
@@ -89,18 +83,12 @@ function App()
 				<Route path="/admin/users" element={<Users />} />
 				<Route path="/admin/orders" element={<Orders />} />
 
-
-
-
-
-
-				<Route path="/*" element={<NotFound/>} />
+				<Route path="/*" element={<NotFound />} />
 			</Routes>
 
-			<Toaster/>
+			<Toaster />
 			<Footer />
 		</Router>
-		
 	);
 }
 

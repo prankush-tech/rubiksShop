@@ -24,7 +24,6 @@ app.use(
 		secret: process.env.SESSION_SECRET,
 		resave: false,
 		saveUninitialized: false,
-		name: 'PRANKUSH_COOKIE'
 
 		// cookie: {
 		// 	secure: process.env.NODE_ENV === 'development' ? false : true,

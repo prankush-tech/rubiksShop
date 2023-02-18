@@ -1,6 +1,7 @@
 {
   "name": "frontend",
   "private": true,
+  "proxy": "https://prankush-rubiks-shop.onrender.com/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
