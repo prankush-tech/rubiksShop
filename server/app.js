@@ -43,11 +43,11 @@ app.use(
 );
 app.use(
 	cors(
-	// 	{
-	// 	credentials: true,
-	// 	origin: process.env.FRONTEND_URL,
-	// 	methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
-	// }
+		{
+		credentials: true,
+		origin: process.env.FRONTEND_URL,
+		methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
+	}
 	)
 );
 
@@ -60,7 +60,7 @@ app.all('/', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     next()
   });
-  
+
 app.set('trust proxy')
 
 connectPassport();
