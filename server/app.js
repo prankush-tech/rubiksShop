@@ -53,7 +53,7 @@ app.use(
 app.use(passport.authenticate('session'));
 app.use(passport.initialize());
 app.use(passport.session());
-app.set('trust proxy', 1)
+app.set('trust proxy')
 
 connectPassport();
 
