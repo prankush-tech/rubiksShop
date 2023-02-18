@@ -34,6 +34,13 @@ app.use(
 	})
 );
 
+app.use(cookieParser());
+app.use(express.json());
+app.use(
+	urlencoded({
+		extended: true
+	})
+);
 app.use(
 	cors(
 	// 	{
@@ -44,25 +51,16 @@ app.use(
 	)
 );
 
-app.all('/', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    next()
-  });
-
-
-  
-app.use(cookieParser());
-app.use(express.json());
-app.use(
-	urlencoded({
-		extended: true
-	})
-);
-
 
 app.use(passport.authenticate('session'));
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.all('/', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    next()
+  });
+  
 app.set('trust proxy')
 
 connectPassport();
