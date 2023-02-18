@@ -43,11 +43,7 @@ app.use(
 );
 
 app.use(
-	cors({
-		credentials: true,
-		origin: process.env.FRONTEND_URL,
-		methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
-	})
+	cors()
 );
 
 app.use(passport.authenticate('session'));
