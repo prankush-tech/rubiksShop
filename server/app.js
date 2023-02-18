@@ -28,7 +28,7 @@ app.use(
 		cookie: {
 			// secure: process.env.NODE_ENV === 'development' ? false : true,
 			// httpOnly: process.env.NODE_ENV === 'development' ? false : true,
-			sameSite: process.env.NODE_ENV === 'development' ? false : 'none'
+			// sameSite: process.env.NODE_ENV === 'development' ? false : 'none'
 		}
 	})
 );
