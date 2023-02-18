@@ -44,6 +44,7 @@ function App() {
 	const { error, message, isAuthenticated } = useSelector(
 	  (state) => state.auth
 	);
+	console.log(isAuthenticated)
   
 	useEffect(() => {
 	  dispatch(loadUser());

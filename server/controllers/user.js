@@ -18,11 +18,11 @@ export const logout=(req,res,next)=>{
             return next(err)
         }
         res.clearCookie("connect.sid",
-        // {
-        //     secure: process.env.NODE_ENV === "development" ? false : true,
-        //     httpOnly: process.env.NODE_ENV === "development" ? false : true,
-        //     sameSite: process.env.NODE_ENV === "development" ? false : "none",
-        //   }
+        {
+            secure: process.env.NODE_ENV === "development" ? false : true,
+            httpOnly: process.env.NODE_ENV === "development" ? false : true,
+            sameSite: process.env.NODE_ENV === "development" ? false : "none",
+          }
           )
         res.status(200).json({
             message:"Logged Out"
