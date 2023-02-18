@@ -24,7 +24,7 @@ app.use(
 		secret: process.env.SESSION_SECRET,
 		resave: false,
 		saveUninitialized: false,
-		name: 'PRANKUSH_COOKIE',
+		name: 'PRANKUSH_COOKIE'
 
 		// cookie: {
 		// 	secure: process.env.NODE_ENV === 'development' ? false : true,
@@ -42,31 +42,27 @@ app.use(
 	})
 );
 app.use(
-	cors(
-		{
+	cors({
 		credentials: true,
 		origin: process.env.FRONTEND_URL,
 		methods: [ 'GET', 'POST', 'PUT', 'DELETE' ]
-	}
-	)
+	})
 );
-
 
 app.use(passport.authenticate('session'));
 app.use(passport.initialize());
 app.use(passport.session());
-
-app.all('/', function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    next()
-  });
-
-app.set('trust proxy')
-
+app.set('trust proxy');
 connectPassport();
+
+app.use(function(req, res, next) {
+	//Enabling CORS
+	res.header('Access-Control-Allow-Origin', '*');
+	res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
+});
+
 
 app.use('/api/v1', userRoute);
 app.use('/api/v1', orderRoute);
-
 
 app.use(errorMiddleWare);
