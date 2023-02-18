@@ -55,11 +55,6 @@ app.use(passport.session());
 app.set('trust proxy');
 connectPassport();
 
-app.use(function(req, res, next) {
-	//Enabling CORS
-	res.header('Access-Control-Allow-Origin', '*');
-	res.header('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT');
-});
 
 
 app.use('/api/v1', userRoute);
