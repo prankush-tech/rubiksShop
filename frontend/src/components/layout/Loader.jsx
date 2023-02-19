@@ -1,6 +1,6 @@
 import React from 'react'
 import {motion} from 'framer-motion'
-import {GiMeltingIceCube} from 'react-icons/Gi'
+import {GiMeltingIceCube} from 'react-icons/gi'
 
 const Loader = () => {
 
