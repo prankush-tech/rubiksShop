@@ -42,8 +42,8 @@ import './styles/about.scss';
 
 function App() {
 	const dispatch = useDispatch();
-	const { error, message, isAuthenticated } = useSelector((state) => state.auth);
-	console.log(isAuthenticated);
+	const { error, message, isAuthenticated, user } = useSelector((state) => state.auth);
+
 
 	useEffect(
 		() => {
@@ -71,7 +71,6 @@ function App() {
 	);
 
 	return (
-		
 		<Router>
 			<Header isAuthenticated={isAuthenticated} />
 			<Routes>
@@ -79,9 +78,6 @@ function App() {
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/cart" element={<Cart />} />
 				<Route path="/about" element={<About />} />
-
-
-
 
 				<Route
 					path="/login"
@@ -92,28 +88,25 @@ function App() {
 					}
 				/>
 
-
-
-
-
 				<Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
-					<Route path="/me" element={<Profile />} />
+					<Route path="/me" element={<Profile  />} />
 					<Route path="/shipping" element={<Shipping />} />
 					<Route path="/confirmOrder" element={<ConfirmOrder />} />
 					<Route path="/order/:id" element={<OrderDetails />} />
 					<Route path="/myorders" element={<MyOrders />} />
+					<Route path="/paymentSuccess" element={<PaymentSuccess />} />
 				</Route>
 
-
-
-
-				<Route path="/paymentSuccess" element={<PaymentSuccess />} />
-
-
-
-
-
-				<Route element={<ProtectedRoute isAuthenticated={isAuthenticated} />}>
+				<Route
+					element={
+						<ProtectedRoute
+							isAuthenticated={isAuthenticated}
+							adminRoute={true}
+							isAdmin={user && user.role === 'admin'}
+							redirectAdmin="/me"
+						/>
+					}
+				>
 					<Route path="/admin/dashboard" element={<Dashboard />} />
 					<Route path="/admin/users" element={<Users />} />
 					<Route path="/admin/orders" element={<Orders />} />

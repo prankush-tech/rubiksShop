@@ -31,7 +31,7 @@ const schema = new mongoose.Schema({
 
     orderItems:{
         
-        MKoto:{
+        MKOTO:{
             price:{
                 type:Number,
                 required:true,
@@ -41,7 +41,7 @@ const schema = new mongoose.Schema({
                 required:true,
             },
         },
-        NKoto:{
+        NKOTO:{
             price:{
                 type:Number,
                 required:true,
@@ -51,7 +51,7 @@ const schema = new mongoose.Schema({
                 required:true,
             },
         },
-        BKoto:{
+        BKOTO:{
             price:{
                 type:Number,
                 required:true,

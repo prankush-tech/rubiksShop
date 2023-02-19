@@ -21,7 +21,7 @@ const Menu = () => {
           itemNum={1} 
           cubeSrc={cube2}  
           price={100} 
-          title="MKoto"
+          title="MKOTO"
           handler={addToCartHandler}
           delay={0.2}
           view3D="https://my.spline.design/untitled-4e7064ad9e766291d054b80407ca2375/"
@@ -30,7 +30,7 @@ const Menu = () => {
           itemNum={2} 
           cubeSrc={cube3}  
           price={100} 
-          title="NKoto"
+          title="NKOTO"
           handler={addToCartHandler}
           delay={0.4}
           view3D="https://my.spline.design/glasscubecopy-4cbd9ac02d494d8d58f192588878aa2c/"
@@ -39,7 +39,7 @@ const Menu = () => {
           itemNum={3} 
           cubeSrc={cube1}  
           price={100} 
-          title="BKoto"
+          title="BKOTO"
           handler={addToCartHandler}
           delay={0.6}
           view3D="https://my.spline.design/glasscubecopycopy-8cba20066362441d1f727491bd077014/"
