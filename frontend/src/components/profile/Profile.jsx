@@ -2,6 +2,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import me from '../../assets/admin.jpg'
 import {Link} from 'react-router-dom';
+import { logout } from "../../redux/actions/user";
 import { useDispatch } from 'react-redux';
 
 const Profile = () => {
