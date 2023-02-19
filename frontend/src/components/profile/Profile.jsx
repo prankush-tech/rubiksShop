@@ -2,6 +2,7 @@ import React from 'react';
 import {motion} from 'framer-motion';
 import me from '../../assets/admin.jpg'
 import {Link} from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 const Profile = () => {
 
@@ -15,6 +16,12 @@ const Profile = () => {
       y:0,
       opacity:1,
     }
+  };
+
+  const dispatch = useDispatch()
+
+  const logoutHandler = () => {
+    dispatch(logout())
   }
 
   return (
@@ -38,7 +45,9 @@ const Profile = () => {
         </motion.div>
 
 
-        <motion.button>
+        <motion.button
+        onClick={logoutHandler}
+        >
           LOGOUT
         </motion.button>
       </main>
