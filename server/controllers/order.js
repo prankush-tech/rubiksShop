@@ -93,7 +93,7 @@ export const placeOrderOnline = asyncError(async (req, res, next) => {
     },
   ],
   mode: 'payment',
-  success_url: `${YOUR_DOMAIN}?success=true`,
+  success_url: `${YOUR_DOMAIN}/paymentsuccess`,
   cancel_url: `${YOUR_DOMAIN}?canceled=true`,
 
 });
