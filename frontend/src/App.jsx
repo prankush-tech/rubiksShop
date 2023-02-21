@@ -94,8 +94,8 @@ function App() {
 					<Route path="/confirmOrder" element={<ConfirmOrder />} />
 					<Route path="/order/:id" element={<OrderDetails />} />
 					<Route path="/myorders" element={<MyOrders />} />
-					<Route path="/paymentSuccess" element={<PaymentSuccess />} />
 				</Route>
+				<Route path="/paymentSuccess" element={<PaymentSuccess />} />
 
 				<Route
 					element={
