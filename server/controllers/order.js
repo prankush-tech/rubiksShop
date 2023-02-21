@@ -13,7 +13,7 @@ dotenv.config({
 
 
 const stripe = new Stripe(process.env.STRIPE_KEY);
-export const YOUR_DOMAIN="http://localhost:4000"
+export const YOUR_DOMAIN="http://localhost:5173"
 
 
 export const placeOrder = asyncError(async (req, res, next) => {
@@ -104,7 +104,8 @@ await Order.create({
   ...orderOptions,
   orderID: session.id,
   paidAt: new Date(Date.now()),
-});
+})
+.then( );
 // await Order.create(orderOptions);
 
     res.status(201).json({

@@ -21,6 +21,7 @@ const ConfirmOrder = () => {
 
 
     const {message,error} = useSelector((state) => state.order)
+    const {messageO,errorO} = useSelector((state) => state.orderOnline)
 
 
 
@@ -32,6 +33,29 @@ const ConfirmOrder = () => {
 		{
 			dispatch(createOrder(shippingInfo, cartItems, paymentMethod, subTotal, tax, shippingCharges, total));
 			
+		}
+		if(paymentMethod === 'Online')
+		{
+			const { data } = await axios.post(
+				`${server}/createorderOnline`,
+				{
+				  shippingInfo,
+				  orderItems:cartItems,
+				  paymentMethod,
+				  itemsPrice:subTotal,
+				  taxPrice:tax,
+				  shippingCharges,
+				  totalAmount:total,
+				},
+				{
+				  headers: {
+					"Content-Type": "application/json",
+				  },
+				  withCredentials: true,
+				}
+			  );
+
+			 console.log(data) 
 		}
 	};
 
@@ -49,6 +73,22 @@ const ConfirmOrder = () => {
         //   setDisableBtn(false);
         }
       }, [dispatch, message, error, navigate]);
+
+
+
+    useEffect(() => {
+        if (messageO) {
+          toast.success(messageO);
+          dispatch({ type: "clearMessageOnline" });
+          dispatch({ type: "emptyState" });
+          navigate("/paymentsuccess");
+        }
+        if (errorO) {
+          toast.error(errorO);
+          dispatch({ type: "clearErrorOnline" });
+        //   setDisableBtn(false);
+        }
+      }, [dispatch, messageO, errorO, navigate]);
 
 	return (
 		<section className="confirmOrder">
