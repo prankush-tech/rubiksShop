@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const schema = new mongoose.Schema({
-  stripe_session_order_id: {
+  razorpay_order_id: {
     type: String,
     required: true,
   },
@@ -21,3 +21,4 @@ const schema = new mongoose.Schema({
 });
 
 export const Payment = mongoose.model("Payment", schema);
+

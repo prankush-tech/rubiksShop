@@ -75,11 +75,10 @@ const schema = new mongoose.Schema({
         default:"COD",
     },
 
-    orderID:
-    {
-       type:String,
-       ref:'Payment',
-    },
+    paymentInfo: {
+        type: mongoose.Schema.ObjectId,
+        ref: "Payment",
+      },
 
     paidAT:Date,
 
