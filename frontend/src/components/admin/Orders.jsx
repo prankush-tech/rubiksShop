@@ -1,60 +1,92 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import {AiOutlineEye} from 'react-icons/ai'
-import {GiArmoredBoomerang} from 'react-icons/gi'
-
-
-
+import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { AiOutlineEye } from 'react-icons/ai';
+import { GiArmoredBoomerang } from 'react-icons/gi';
+import { useDispatch, useSelector } from 'react-redux';
+import { getAdminOrders, processOrder } from '../../redux/actions/admin';
+import Loader from '../layout/Loader';
+import toast from 'react-hot-toast';
 
 const Orders = () => {
-    const array=[1,2,3,4];
-  return (
-    <section className="tableClass">
+	const dispatch = useDispatch();
 
-        <main>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Order ID</th>
-                        <th>Status</th>
-                        <th>Item Quantity</th>
-                        <th>Amount</th>
-                        <th>Payment Method</th>
-                        <th>User</th>
-                        <th>View Detail</th>
-                    </tr>
-                </thead>
+	const { loading, orders, message, error } = useSelector((state) => state.admin);
 
-                <tbody>
+	const processOrderHandler = (id) => {
+		dispatch(processOrder(id));
+	};
 
-                    {
-                        array.map((item,index)=>{
-                            return(
-                                <tr key={index}>
-                                    <td>iwuhashkja</td>
-                                    <td>Processing</td>
-                                    <td>23</td>
-                                    <td>Rs.{ 123123}/-</td>
-                                    <td>COD</td>
-                                    <td>PRANKUSH</td>
-                                    <td><Link to={`/order/${"asdad"}`}>
-                                        <AiOutlineEye />
-                                        </Link>
+	useEffect(
+		() => {
+			if (message) {
+				toast.success(message);
+				dispatch({ type: 'clearMessage' });
+			}
+			if (error) {
+				toast.error(error);
+				dispatch({ type: 'clearError' });
+			}
 
-                                        <button>
-                                            <GiArmoredBoomerang />
-                                        </button>
+			dispatch(getAdminOrders());
+		},
+		[ dispatch, error, message ]
+	);
 
-                                        </td>
-                                </tr>
-                            )
-                        })
-                    }
-                </tbody>
-            </table>
-        </main>
-    </section>
-  )
-}
 
-export default Orders
+		orders && orders.map((i) => {
+			console.log(i.user.name)
+		})
+
+	return (
+		<section className="tableClass">
+			{loading === false ? (
+				<main>
+					<table>
+						<thead>
+							<tr>
+								<th>Order ID</th>
+								<th>Status</th>
+								<th>Item Quantity</th>
+								<th>Amount</th>
+								<th>Payment Method</th>
+								<th>User</th>
+								<th>ACTION</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{orders &&
+								orders.map((i) => (
+									<tr key={i}>
+										<td>#{i._id}</td>
+										<td>{i.orderStatus}</td>
+										<td>
+											{i.orderItems.MKOTO.quantity +
+												i.orderItems.NKOTO.quantity +
+												i.orderItems.BKOTO.quantity}
+										</td>
+										<td>Rs. {i.totalAmount}/-</td>
+										<td>{i.paymentMethod}</td>
+										<td>{orders[0].user.name}</td>
+										<td>
+											<Link to={`/order/${i._id}`}>
+												<AiOutlineEye />
+											</Link>
+
+											<button onClick={() => processOrderHandler(i._id)}>
+												<GiArmoredBoomerang />
+											</button>
+										</td>
+									</tr>
+								))}
+						</tbody>
+					</table>
+				</main>
+			) : (
+				<Loader />
+			)}
+		</section>
+	);
+};
+
+export default Orders;

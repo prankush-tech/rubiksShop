@@ -23,7 +23,7 @@ const MenuCard = ({itemNum,cubeSrc ,price,title, handler,delay=0,view3D}) => {
             <img src={cubeSrc} alt="cube" />
             <h5>Rs {price} /-</h5>
             <p>{title}</p>
-            <button onClick={()=>handler(itemNum) } >BUY NOW </button>
+            <button onClick={()=>handler(itemNum) } >ADD TO CART</button>
             
             <button className='buttonHiding'>
                 <a href={view3D} target="_blanck">VIEW 3D</a>

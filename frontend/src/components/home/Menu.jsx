@@ -3,13 +3,38 @@ import MenuCard from './MenuCard'
 import cube1 from '../../assets/cube1.png'
 import cube2 from '../../assets/cube2.png'
 import cube3 from '../../assets/cube3.png'
-import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import toast from "react-hot-toast";
 
 
 
 const Menu = () => {
+  const dispatch = useDispatch();
+  const addToCartHandler = (itemNum) => {
+    switch (itemNum) {
+      case 1:
+        dispatch({ type: "MKOTOIncrement" });
+        dispatch({ type: "calculatePrice" });
+        toast.success("Added To Cart");
+        break;
+      case 2:
+        dispatch({ type: "NKOTOIncrement" });
+        dispatch({ type: "calculatePrice" });
+        toast.success("Added To Cart");
+        break;
+      case 3:
+        dispatch({ type: "BKOTOIncrement" });
+        dispatch({ type: "calculatePrice" });
+        toast.success("Added To Cart");
+        break;
 
- const addToCartHandler = (itemNum) => {}
+      default:
+        dispatch({ type: "MKOTOIncrement" });
+        dispatch({ type: "calculatePrice" });
+        toast.success("Added To Cart");
+        break;
+    }
+  };
 
 
   return (
