@@ -14,10 +14,11 @@
 ### DASHBOARD
 ![Screenshot 2023-02-11 112943](https://user-images.githubusercontent.com/76916192/218243291-6fed90c1-944c-4dbc-a881-bc8785a0e392.png)
 
-## Order DETAILS
-![Screenshot 2023-02-11 113004](https://user-images.githubusercontent.com/76916192/218243303-cab176f0-33ca-437d-8aee-57fb2d661621.png)
 
-## Order DETAILS ADMINS
+## USER DETAILS ADMINS
+![Screenshot 2023-03-18 141857](https://user-images.githubusercontent.com/76916192/226095503-5ed128fa-e7dd-4ae8-b331-14fb3074646b.png)
+
+## Order DETAILS ADMIN ALL (USER ONLY OWN)
 ![Screenshot 2023-03-18 141408](https://user-images.githubusercontent.com/76916192/226095264-25cd5f07-66ba-47fe-bb27-0de6c8f9b60e.png)
 
 ## LOG In TOKEN 
