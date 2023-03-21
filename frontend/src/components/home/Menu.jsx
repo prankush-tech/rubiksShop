@@ -45,7 +45,7 @@ const Menu = () => {
         <MenuCard 
           itemNum={1} 
           cubeSrc={cube2}  
-          price={100} 
+          price={10} 
           title="MKOTO"
           handler={addToCartHandler}
           delay={0.2}
@@ -54,7 +54,7 @@ const Menu = () => {
         <MenuCard 
           itemNum={2} 
           cubeSrc={cube3}  
-          price={100} 
+          price={20} 
           title="NKOTO"
           handler={addToCartHandler}
           delay={0.4}
@@ -63,7 +63,7 @@ const Menu = () => {
         <MenuCard 
           itemNum={3} 
           cubeSrc={cube1}  
-          price={100} 
+          price={25} 
           title="BKOTO"
           handler={addToCartHandler}
           delay={0.6}
