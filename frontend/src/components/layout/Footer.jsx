@@ -10,7 +10,7 @@ const Footer = () => {
                 RUBIKS CUBE SELLING
             </h2>
             <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam iure quis magnam?
+               We have 3 products right now.MKOTO , NKOTO and BKOTO. All have glass morphisms material and smooth rotation.
             </p>
 
             <br />
@@ -18,7 +18,7 @@ const Footer = () => {
             <br />
             <br />
             <strong>
-                ALL rights reserved @PRANKUSH
+                ALL rights reserved @PRANKUSH_TECH
             </strong>
 
 

@@ -13,9 +13,8 @@ const Founder = () => {
           <br></br>
           <h2>Prankush Giri</h2>
           <br></br>
-          <p>Lorem ipsum dolor sit amet           <br></br>
-            consectetur adipisicing elit. Magni, amet.Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Magni, amet</p>
+          <p>THREE JS | MERN DEVELOPER           <br/><br/>
+            Breaking the limits of WEB</p>
         </motion.div>
       </section>
     </>

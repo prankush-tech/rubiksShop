@@ -10,7 +10,7 @@ const Home = () => {
 		<section className="home">
 			<div className="hero-heading">
 				<h1>ROOKIE</h1>
-				<p>Lorem ipsum dolor sit elit. Ratione, eos.</p>
+				<p>BUY an awesome rubiks cube to get started.</p>
 				<a href="#menu">Explore</a>
 
 				<div className="hero-title">
