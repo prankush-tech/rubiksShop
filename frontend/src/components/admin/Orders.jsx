@@ -33,10 +33,6 @@ const Orders = () => {
 	);
 
 
-		orders && orders.map((i) => {
-			console.log(i.user.name)
-		})
-
 	return (
 		<section className="tableClass">
 			{loading === false ? (

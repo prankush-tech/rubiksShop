@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import {FiShoppingCart, FiLogIn} from 'react-icons/fi'
 import {FaUser} from 'react-icons/fa'
-import {GiMeltingIceCube} from 'react-icons/Gi'
+import {GiMeltingIceCube} from 'react-icons/gi'
 import {motion} from 'framer-motion'
 
 

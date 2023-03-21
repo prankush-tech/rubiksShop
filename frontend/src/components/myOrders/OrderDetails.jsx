@@ -18,7 +18,7 @@ const OrderDetails = () => {
         dispatch(getOrderDetails(params.id));
       }, [params.id, dispatch]);
 
-
+console.log(order)
   return (
     <section className="orderDetails">
       {loading === false && order !== undefined ? (
@@ -51,11 +51,11 @@ const OrderDetails = () => {
             </p>
             <p>
               <b>Placed At</b>
-              {order.createdAt.split("T")[0]}
+              {order.createdAt.split('T')[0] }
             </p>
             <p>
               <b>Delivered At</b>
-              {order.deliveredAt ? order.deliveredAt.split("T")[0] : "NA"}
+              {order.deliveredAt ? order.deliveredAt.split('T')[0]  : "NA"}
             </p>
           </div>
 
@@ -73,9 +73,7 @@ const OrderDetails = () => {
             </p>
             <p>
               <b>Paid At</b>
-              {order.paymentMethod === "Online"
-                ? order.paidAt.split("T")[0]
-                : "NA"}
+              {order.paidAT}
             </p>
           </div>
 
@@ -132,7 +130,7 @@ const OrderDetails = () => {
                   fontWeight: 800,
                 }}
               >
-                ₹{order.itemsPrice}
+                Rs. {order.itemsPrice}/-
               </div>
             </div>
           </article>
