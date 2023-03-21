@@ -63,7 +63,7 @@ const Orders = () => {
 										</td>
 										<td>Rs. {i.totalAmount}/-</td>
 										<td>{i.paymentMethod}</td>
-										<td>{orders[0].user.name}</td>
+										<td>{i.user.name}</td>
 										<td>
 											<Link to={`/order/${i._id}`}>
 												<AiOutlineEye />
