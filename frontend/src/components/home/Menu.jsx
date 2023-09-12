@@ -8,7 +8,8 @@ import toast from "react-hot-toast";
 
 
 
-const Menu = () => {
+const Menu = () => 
+{
   const dispatch = useDispatch();
   const addToCartHandler = (itemNum) => {
     switch (itemNum) {

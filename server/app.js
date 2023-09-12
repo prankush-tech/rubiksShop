@@ -4,7 +4,6 @@ import userRoute from './routes/user.js';
 import orderRoute from './routes/order.js';
 import { connectPassport } from './utils/Provider.js';
 import session from 'express-session';
-import cookieSession from 'cookie-session';
 import passport from 'passport';
 import cookieParser from 'cookie-parser';
 import { errorMiddleWare } from './middlewares/errorMiddleware.js';
@@ -48,8 +47,8 @@ app.use(
 	})
 );
 
-app.use(passport.authenticate('session'));
 app.use(passport.initialize());
+app.use(passport.authenticate('session'));
 app.use(passport.session());
 app.enable('trust proxy');
 
