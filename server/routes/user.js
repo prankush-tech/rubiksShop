@@ -7,16 +7,19 @@ import { authorizedAdmin, isAuthenticated } from '../middlewares/auth.js';
 
 const router = express.Router();
 
-router.get('/googlelogin', passport.authenticate('google', { scope: [ 'profile' ] }));
-
 router.get(
-	'/login',
-	passport.authenticate('google',{
-
-		successRedirect: process.env.FRONTEND_URL
+	"/googlelogin",
+	passport.authenticate("google", {
+	  scope: ["profile"],
 	})
-	// 	scope: [ 'profile' ],
-);
+  );
+  
+  router.get(
+	"/login",
+	passport.authenticate("google", {
+	  successRedirect: process.env.FRONTEND_URL,
+	})
+  );
 
 //login
 router.get('/me', isAuthenticated, myProfiles);

@@ -1,6 +1,5 @@
 import app from './app.js';
 import {connectDB} from './config/database.js';
-import Stripe from 'stripe';
 import Razorpay from 'razorpay';
 
 

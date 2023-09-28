@@ -1,7 +1,6 @@
 import { asyncError } from '../middlewares/errorMiddleware.js';
 import { Order } from '../models/Order.js';
 import ErrorHandler from '../utils/ErrorHandler.js';
-import Stripe from 'stripe';
 import dotenv from 'dotenv';
 import { User } from '../models/User.js';
 import { instance } from '../server.js';
@@ -12,8 +11,6 @@ dotenv.config({
 });
 import { Payment } from "../models/Payment.js";
 
-const stripe = new Stripe(process.env.STRIPE_KEY);
-export const YOUR_DOMAIN = 'http://localhost:5173';
 
 export const placeOrder = asyncError(async (req, res, next) => {
 	const { shippingInfo, orderItems, paymentMethod, itemsPrice, taxPrice, shippingCharges, totalAmount } = req.body;
