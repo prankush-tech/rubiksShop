@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "private": true,
-  "proxy": "https://prankush-rubiks-shop.onrender.com",
+  "proxy": "https://rubiks-shop-vercel.vercel.app",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
