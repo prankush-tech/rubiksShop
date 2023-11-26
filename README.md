@@ -1,4 +1,4 @@
-# Rubiks Shop - Ecommerce (Full Stack WebAPP)
+# Rubiks Shop - Product Delivery Full Stack WebAPP
 ## (MongoDb,Express,React,Redux,Node,PsssportJS,Google-Cloud,Three.js,WebGL,Spline,FramerMotion,ChartJS,RAZOR-PAY)
 # V1 Deployed <a href="https://prankushshop.netlify.app/" target="-blanck">GO LIVE</a>
 
