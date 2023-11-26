@@ -19,6 +19,6 @@ const store = configureStore({
 export default store;
 
 
-// export const server = "https://rubiks-shop-vercel.vercel.app/api/v1"
-export const server = "https://prankush-rubiks-shop.onrender.com/api/v1"
+export const server = "https://rubiks-shop.vercel.app/api/v1"
+// export const server = "https://prankush-rubiks-shop.onrender.com/api/v1"
 // export const server = "http://localhost:4000/api/v1"
